@@ -52,4 +52,4 @@ The entry point to the app is `index.html` which has relative path references to
 
 
 ## Credit
-Created by Rohit Nethi
+Created by [Rohit Nethi](https://github.com/RohitNethi)
