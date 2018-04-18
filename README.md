@@ -23,6 +23,32 @@ Run `npm install` in the project directory on your local machine.
 ###### Folder Structure
 <img src="./images/folder-struct.png" alt="folder strcuture"/>
 
+###### Running the app
+To run the app in development on local-server use:
+`npm run dev`
+
+To run the app in production mode use: 
+`npm run prod`
+
+To run the app in development mode without local-server use:
+`npm run start`
+
+To use the app, go to:
+`localhost:8080` in your browser
+
+The app uses SCSS for CSS Pre-processing. The sass files are automatically converted
+to css on running the app using `Node-sass` plugin. The output css files are placed in the `Assets` folder
+
+Webpack output's a `bundle.js` file which contains all the transpiled react and es6 code using Babel loaders.
+
+The entry point to the app is `index.html` which refers to the `bundle.js` file, `app.css` and `base.css`.
+
+## References
+
+[React Documentation](https://reactjs.org/docs)
+
+[Webpack Documentation](https://webpack.js.org/concepts/)
+
 
 ## Credit
 Created by Rohit Nethi
