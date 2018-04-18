@@ -1,27 +1,22 @@
-import React, { Component } from 'react';
+//Create new todolist item
 
+import React from 'react';
 
-export default class NewTodo extends Component{
-    constructor(props){
-        super(props);
-        this.state={
-            input: ''
-        }
+ const NewTodo = (props)=>{
 
-    }
+    const ENTER_KEY = 13;
 
-    render(){
-        const ENTER_KEY = 13;
         return(
           <div className="newtodo">
               <form>
 
+                  {/*Checking both keyCode and charCode for browser compatibility*/}
                   <input type="text"
                          onKeyPress={e=>{if(e.charCode===ENTER_KEY||e.keyCode===ENTER_KEY){
-                             this.props.handleKeyPress(e);
+                             props.handleKeyPress(e);
                          }}}
-                         onChange ={(e)=> this.props.handleChange(e)}
-                        value = {this.props.input}
+                         onChange ={(e)=> props.handleChange(e)}
+                         value = {props.input}
                          placeholder="Add new todo"
                          autoFocus
                          required
@@ -31,4 +26,5 @@ export default class NewTodo extends Component{
           </div>
         );
     }
-}
+
+    export default NewTodo;

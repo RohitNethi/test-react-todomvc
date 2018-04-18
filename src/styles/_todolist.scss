@@ -1,9 +1,11 @@
 
 .app-component{
 
-    width:360px;
-    margin: 100px auto;
-    box-shadow: 0 0 3px rgba(0,0,0,0.1);
+    font-size: 1.5rem;
+    font-family: 'Raleway','sans-serif';
+    width:36rem;
+    margin: 10rem auto;
+    box-shadow: 0 0 0.3rem rgba(0,0,0,0.1);
     background: $color-background-grey;
 
     .todoheader{
@@ -25,12 +27,12 @@
             width: 100%;
             box-sizing: border-box;
             padding:1.5rem;
-            border: 3px solid steelblue;
+            border: 0.1rem solid steelblue;
         }
 
         input:focus{
             background: #fff;
-            border: 1px solid #2980b9;
+            border: 0.2rem solid #2980b9;
             outline: none;
         }
     }
@@ -51,18 +53,20 @@
             margin: 0;
             padding:0;
 
+            li:nth-child(2n){
+                background: #f2f2f2;
+            }
 
         }
 
         li{
             background:#fff;
-            height: 40px;
-            line-height: 40px;
+            height: 4rem;
+            line-height: 4rem;
             color: #666;
+            cursor: pointer;
 
-            &:nth-child(2n){
-                background: #f7f7f7;
-            }
+
 
 
             &:hover .deletebutton{
@@ -75,25 +79,33 @@
             }
 
             .todolistitem{
-                padding: 1rem;
+                padding: 1.5rem;
             }
 
             .deletebutton{
                 float:right;
-                font-size: 1.5rem;
+                font-size: 2rem;
                 color: #e74c3c;
-                height: 40px;
-                width: 0px;
+                height: 4rem;
+                width: 0;
                 text-align: center;
                 transition: 0.2s linear;
                 opacity:0;
                 cursor: pointer;
+
+                &:hover{
+                    opacity: 0.6;
+                }
             }
         }
 
+    }
 
-
-
+    .counter{
+        padding: 2rem;
+        font-size: 2rem;
     }
 }
+
+
 
