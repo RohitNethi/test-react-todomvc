@@ -8,19 +8,13 @@ export default class App extends Component{
         super(props);
         this.state= {
             input: '',
-            todos: [
-                {
-                    value: 'Complete this challenge',
-                    done: false
-                },
-                {
-                    value: 'Complete this challenge',
-                    done: true
-                }
-            ]
+            todos: []
         }
+
         this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleListItemClick = this.handleListItemClick.bind(this);
+        this.handleClick = this.handleClick.bind(this);
+        this.handleKeyPress = this.handleKeyPress.bind(this);
     }
 
     handleChange(e){
@@ -30,20 +24,44 @@ export default class App extends Component{
         });
     }
 
-    handleSubmit(e){
-        e.preventDefault();
-        const newTodo = {
-            value: this.state.input,
-            done: false
-        }
-
-        //Slicing the original Array for Immutability
+    handleListItemClick(todo){
         const todos = this.state.todos.slice();
-        todos.push(newTodo);
+        todo.completed = !todo.completed;
         this.setState({
-            todos,
-            input: ''
+            todos
         });
+    }
+
+    handleClick(e,id) {
+        const todos = this.state.todos.filter((todo)=>{
+            if(todo.id!==id){
+                return todo;
+            }
+        });
+
+        this.setState({
+            todos
+        });
+        e.stopPropagation();
+    }
+
+    handleKeyPress(e){
+        e.preventDefault();
+        if(this.state.input.trim()!=='') {
+            const newTodo = {
+                id: Date.now(),
+                value: this.state.input,
+                completed: false
+            }
+
+            //Slicing the original Array for Immutability
+            const todos = this.state.todos.slice();
+            todos.push(newTodo);
+            this.setState({
+                todos,
+                input: ''
+            });
+        }
     }
 
 
@@ -54,10 +72,12 @@ export default class App extends Component{
                     <NewTodo
                     input = {this.state.input}
                     handleChange = {this.handleChange}
-                    handleSubmit = {this.handleSubmit}
+                    handleKeyPress = {this.handleKeyPress}
                     />
                     <TodoList
                         todos= {this.state.todos}
+                        handleClick= {this.handleClick}
+                        handleListItemClick ={this.handleListItemClick}
                     />
                 </div>
             );

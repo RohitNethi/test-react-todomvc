@@ -16,5 +16,84 @@
         text-transform: uppercase;
         font-weight: normal;
     }
+
+    .newtodo{
+        display:block;
+        width:100%;
+
+        input{
+            width: 100%;
+            box-sizing: border-box;
+            padding:1.5rem;
+            border: 3px solid steelblue;
+        }
+
+        input:focus{
+            background: #fff;
+            border: 1px solid #2980b9;
+            outline: none;
+        }
+    }
+
+    .todolist{
+        display:block;
+        width:100%;
+
+
+        .completed{
+
+            color: gray;
+            text-decoration: line-through;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding:0;
+
+
+        }
+
+        li{
+            background:#fff;
+            height: 40px;
+            line-height: 40px;
+            color: #666;
+
+            &:nth-child(2n){
+                background: #f7f7f7;
+            }
+
+
+            &:hover .deletebutton{
+                opacity: 1.0;
+                margin-right: 3rem;
+            }
+
+            &:hover{
+                opacity:0.8;
+            }
+
+            .todolistitem{
+                padding: 1rem;
+            }
+
+            .deletebutton{
+                float:right;
+                font-size: 1.5rem;
+                color: #e74c3c;
+                height: 40px;
+                width: 0px;
+                text-align: center;
+                transition: 0.2s linear;
+                opacity:0;
+                cursor: pointer;
+            }
+        }
+
+
+
+
+    }
 }
 
