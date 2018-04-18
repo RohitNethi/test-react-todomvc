@@ -25,12 +25,15 @@ Run `npm install` in the project directory on your local machine.
 
 #### Running the app
 To run the app in development on local-server use:
+
 `npm run dev` and go to: `localhost:8080` in your browser
 
 To run the app in production mode use: 
+
 `npm run prod` and open index.html
 
 To run the app in development mode without local-server use:
+
 `npm run start` and open index.html
 
 
@@ -39,7 +42,7 @@ to css on running the app using `Node-sass` plugin. The output css files are pla
 
 Webpack output's a `bundle.js` file which contains all the transpiled react and es6 code using Babel loaders.
 
-The entry point to the app is `index.html` which refers to the `bundle.js` file, `app.css` and `base.css`.
+The entry point to the app is `index.html` which has relative path references to the `bundle.js` file, `app.css` and `base.css`.
 
 ## References
 
