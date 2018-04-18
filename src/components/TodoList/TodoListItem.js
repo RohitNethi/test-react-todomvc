@@ -20,6 +20,12 @@ const TodoListItem = (props)=>{
                             todo={props.todo}
                             />
                         </span>
+                        <input
+                            className="checkbox"
+                            type="checkbox"
+                            onChange={(e)=>e.preventDefault()}
+                            checked ={props.todo.completed}
+                        />
                     </div>
                 </li>
         );
