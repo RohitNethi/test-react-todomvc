@@ -9,7 +9,7 @@ It also shows a counter for number of items left to complete in the list.
 
 These instructions will help you get the project running on your local system.
 
-###### Prerequisites
+#### Prerequisites
 You need to have Node.js installed on your system.
 
 Clone this repository using:
@@ -20,21 +20,19 @@ Run `npm install` in the project directory on your local machine.
 
 ## Implementation
 
-###### Folder Structure
+#### Folder Structure
 <img src="./images/folder-struct.png" alt="folder strcuture"/>
 
-###### Running the app
+#### Running the app
 To run the app in development on local-server use:
-`npm run dev`
+`npm run dev` and go to: `localhost:8080` in your browser
 
 To run the app in production mode use: 
-`npm run prod`
+`npm run prod` and open index.html
 
 To run the app in development mode without local-server use:
-`npm run start`
+`npm run start` and open index.html
 
-To use the app, go to:
-`localhost:8080` in your browser
 
 The app uses SCSS for CSS Pre-processing. The sass files are automatically converted
 to css on running the app using `Node-sass` plugin. The output css files are placed in the `Assets` folder
