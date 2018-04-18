@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --open",
-    "prod": "webpack --mode=production"
+    "dev": "webpack-dev-server --hot --inline"
   },
   "author": "Rohit Nethi",
   "license": "ISC",
