@@ -1,5 +1,5 @@
 //Variables
-$color-background-grey: #f7f7f7;
+$color-background-grey: #a5a5a5;
 $color-background-todo-header: steelblue;
 $color-background-alternate: #f2b643;
 .app-component{
@@ -57,7 +57,11 @@ $color-background-alternate: #f2b643;
             padding:0;
 
             li:nth-child(2n){
-                background: #f2f2f2;
+                background: #fafafa;
+
+                &:hover{
+                    background: #efefef;
+                }
             }
 
         }
@@ -76,7 +80,7 @@ $color-background-alternate: #f2b643;
             }
 
             &:hover{
-                opacity:0.8;
+                background: #efefef;
             }
 
             .todolistitem{
@@ -85,7 +89,7 @@ $color-background-alternate: #f2b643;
             }
 
             .deletebutton{
-                float:left;
+                float:right;
                 font-size: 2rem;
                 color: #fff;
                 background: #e74c3c;
@@ -102,9 +106,10 @@ $color-background-alternate: #f2b643;
             }
 
             .checkbox{
-                float:right;
+                float:left;
                 height: 4rem;
-                margin-right:2rem;
+                width:2rem;
+                margin-left:2rem;
                 box-sizing: border-box;
             }
 
@@ -115,7 +120,7 @@ $color-background-alternate: #f2b643;
     .counter{
         padding: 2rem;
         font-size: 2rem;
-        background: $color-background-todo-header;
+        background: $color-background-grey;
     }
 }
 

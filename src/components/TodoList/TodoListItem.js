@@ -23,7 +23,7 @@ const TodoListItem = (props)=>{
                         <input
                             className="checkbox"
                             type="checkbox"
-                            onChange={(e)=>e.preventDefault()}
+                            onClick={(e)=>props.handleCheckboxClick(props.todo,e)}
                             checked ={props.todo.completed}
                         />
                     </div>

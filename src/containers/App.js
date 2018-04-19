@@ -9,11 +9,12 @@ export default class App extends Component{
         super(props);
         this.state= {
             input: '',
-            todos: []
+            todos: [],
         }
 
         //Binding Event handlers to avoid creating them each time the component renders
         this.handleChange = this.handleChange.bind(this);
+        this.handleCheckboxClick = this.handleCheckboxClick.bind(this);
         this.handleListItemClick = this.handleListItemClick.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.handleKeyPress = this.handleKeyPress.bind(this);
@@ -34,6 +35,16 @@ export default class App extends Component{
         this.setState({
             todos
         });
+    }
+
+    //Handles Toggling of TodoItem completed property. Redundant here. Fix if time permits.
+    handleCheckboxClick(todo,e){
+        const todos = this.state.todos.slice();
+        todo.completed = !todo.completed;
+        this.setState({
+            todos
+        });
+        e.stopPropagation();
     }
 
     //Handles Deletion of Items from TodoList
@@ -91,6 +102,7 @@ export default class App extends Component{
 
                     <TodoList
                         todos= {this.state.todos}
+                        handleCheckboxClick = {this.handleCheckboxClick}
                         handleClick= {this.handleClick}
                         handleListItemClick ={this.handleListItemClick}
                     />

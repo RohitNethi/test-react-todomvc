@@ -12,6 +12,7 @@ const TodoList = (props)=>{
                             <TodoListItem
                             key={index}
                             todo={todo}
+                            handleCheckboxClick={(todo,e)=>props.handleCheckboxClick(todo,e)}
                             handleListItemClick={(todo)=>{props.handleListItemClick(todo)}}
                             handleClick={(e,id)=>props.handleClick(e,id)}
                             />
