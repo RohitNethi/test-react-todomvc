@@ -2,7 +2,7 @@
 # TodoMVC (React)
 
 ###### Description
-> A TodoList app built using React. The app allows adding, deleting and checking completion status of todo list items.
+> A simple TodoList app built using React as part of my Medium.com article on getting started with React. The app allows adding, deleting and checking completion status of todo list items.
 It also shows a counter for number of items left to complete in the list.
 
 ## Getting Started
